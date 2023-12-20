@@ -7,6 +7,8 @@ import { UpdateGameDto } from 'src/dto/update-game-dto';
 export class GamesController {
     constructor(private readonly gamesService: GamesService) { }
 
+    // Rotas
+
     @Post('/create')
     create(@Body() createGameDto: CreateGameDto) {
         return this.gamesService.create(createGameDto);
