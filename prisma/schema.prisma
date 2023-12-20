@@ -1,0 +1,17 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Jogos {
+  id        Int    @id @default(autoincrement())
+  name      String
+  productor String
+  barcode   String
+
+  @@map("Games")
+}
